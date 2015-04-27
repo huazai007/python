@@ -12,11 +12,10 @@ lst = d.items()
 for i in range(1,len(lst)):
 	key =lst[i]
 	j=i-1
-	while j>= 0 and key[1] <lst[j][1]:
+	while j>= 0 and key[1] >lst[j][1]:
 		lst[j+1]=lst[j]
 		lst[j] =key
 		j =j-1	
-lst.reverse()	
 for (k,v) in lst[0:10]:
 	print k
 
