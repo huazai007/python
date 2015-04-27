@@ -1,0 +1,68 @@
+1.实现copy的功能
+
+2.统计每个字符出现的次数
+(read_me字符串在最后)
+
+3.实现fromkeys的功能
+
+4.实现keys功能
+
+5.实现update功能
+
+6.把一个dict的key和value反转
+    （如果value有重复的，把多个key，放在list）
+    提示：判断是否list 
+        print isinstance([1,2,3],list)
+        print type([1,2]) == type([])
+init_dict = {'waihao':'pc','name':'pc','age':12,'job':'IT'}
+
+循环 init_dict  k和v
+    new_dict[v]不存在
+        new_dict[v] = k
+    else：
+        if new_dict[v]是一个list
+            new_dict[v].append(k)
+        else:
+            new_dict变成，存着之前的值，和刚遍历的值
+
+
+
+
+{'waihao':'pc','name':'pc','a':'pc','age':12,'job':'IT'}
+
+{'pc':'waihao'}
+
+{'pc':['waihao','name']}
+
+{'pc':['waihao','name','a']}
+
+    思路：
+        循环（k,v） init_dict
+            new_dict[v]存在：
+                if new_dict[v]不是list，说明是第二次出现
+                    new_dict[v] = [原来的值，k]
+                else new_dict[v]是list：
+                    new_dict[v].append(k)
+            new_dict[v]不存在
+                new_dict[v] = k     
+
+7,实现首字母大写的功能 其他字母小写
+    'rebOoT'
+    （upper lower）
+    ‘Reboot’
+
+8. 'reboot' 字符串倒序（不能用切片）
+
+9.用户输入员工名字和id，名字和id之间用:分隔
+    多个用户 用逗号分隔，最终输入所有用户对应id的信息
+
+输入内容： em1:009,em2:002,em3:003
+输出：[('em1', '009'), ('em2', '002'), ('em3', '003 ')]
+    用户可能会把冒号输入成分号 ，也能接受
+
+作业：
+    第二题加一个需求，打印出前十个出现的字符（只用学过的知识）
+
+read_me = '''
+first of all, i want make it clear that i can not claim understanding this holy book  in just a few weeks, and i would not dare comment on this sacred book, in addition, i don't think i can give you a full picture of the holy bible in just few words.i can not preach anything here. what i want to do here is to express my understanding by sharing two events described in this book. the fist story i want to share is abandoned tower of babel.according to the bibel,people use the same language to communicate with each other in ancient times.with the soaring vanity,they decided to build a heaven-reaching tower to show off their achievement, god knows, he change the human language into different kinds and make it difficult for people to communicate with each other,hence the failure of building tower of  babel.this story tells people,never do things in selfishness, but make a life out of enternal glory.the other story,before jesus christ was crucified,he said, father,forgive them, for they know not what they do. with great love, he shouldered all the sins of  people. what can we learn from this story?we live in this world thanks to the love of god, for this reanson, we should make our lives glorious to honor our god.finally,i want to sum up by saying that only if we put our lives in the eternal love of god,can we live a perfect life, and  what you appealed is what god expected!
+'''
