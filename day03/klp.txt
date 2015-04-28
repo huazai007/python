@@ -1,0 +1,131 @@
+has_key()
+函数用于判断键是否存在于字典中，如果键在字典dict里返回true，否则返回false。
+dict = {'Name': 'Zara', 'Age': 7}
+print "Value : %s" %  dict.has_key('Age')
+print "Value : %s" %  dict.has_key('Sex')
+
+ copy() 函数返回一个字典的浅复制
+dict1 = {'Name': 'Zara', 'Age': 7};
+dict2 = dict1.copy()
+print "New Dictinary : %s" %  str(dict2)
+
+clear() 函数用于删除字典内所有元素。
+dict = {'Name': 'Zara', 'Age': 7};
+print "Start Len : %d" %  len(dict)
+dict.clear()
+print "End Len : %d" %  len(dict)
+
+type() 函数返回输入的变量类型，如果变量是字典就返回字典类型。
+>>> lst = ['aa','bb']
+>>> d = {'aa':'bb','cc':'dd'}
+>>> type(lst)
+<type 'list'>
+>>> type(d)
+<type 'dict'>
+
+str() 函数将值转化为适于人阅读的形式，以可打印的字符串表示。
+>>> lst = [55,66,77,22]
+>>> max(lst)
+77
+>>> min(lst)
+22
+
+len() len(lst) 函数计算字典元素个数，即键的总数。
+max()
+min()
+reverse()相反的
+sort()
+pop()
+>>> lst.pop(0)
+66
+remove()
+>>> lst.remove(55)
+>>> lst
+[66, 77, 22]
+
+insert()
+>>> lst.insert(1,'heheh')
+>>> lst
+[66, 'heheh', 77, 22]
+
+index() lst.index('aa')
+extend()函数用于在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）
+lst.extend(lst2)
+count() 方法用于统计某个元素在列表中出现的次数。
+lst.count('aa')
+append() 方法用于在列表末尾添加新的对象。
+list() 方法用于将元组转换为列表。
+del lst[0]
+
+
+
+get() 函数返回指定键的值，如果值不在字典中返回默认值。
+>>> d = {'w':5,'a':50}
+>>> d.get('w',0)
+5
+
+setdefault() 函数和get()方法类似,
+如果键已经存在于字典中，将会添加键并将值设为默认值。
+d = {}
+print d.setdefault('name','wd')
+print d.setdefault('name','pc')
+print d
+
+
+fromkeys()函数用于创建一个新字典,以序列seq中元素做字典的键，value为字典所有键对应的初始值
+dict.fromkeys(seq, value))
+seq = ('name', 'age', 'sex')
+>>> print {}.fromkeys(seq,100)
+{'age': 100, 'name': 100, 'sex': 100}
+
+keys()
+>>> d = {'w':5,'a':50}
+>>> d.keys()
+['a', 'w']
+update() 函数把字典dict2的键/值对更新到dict里
+d = {'w':5,'a':50}
+d1 = {'w':2,'aa':35}
+d.update(d1)
+>>> d
+{'a': 50, 'aa': 35, 'w': 2}
+
+join() 方法用于将序列中的元素以指定的字符连接生成一个新的字符串
+>>> '|'.join(['helllo','word'])
+'helllo|word'
+
+>>> 'helloword'.find('e')存在返回1，否则返回-1
+1
+>>> 'helloword'.find('pp')
+-1
+
+>>> 'helloword'.capitalize()首字母大写
+'Helloword'
+
+>>> s = 'rebOoT'大写
+>>> s.upper()
+'REBOOT'
+>>> s.lower()小写
+'reboot'
+replace:替换
+split:安装某个符号给切成个list
+s = 'aa;bb,ccc;ee,ee;ff,gg;ee'
+new_lst=s.replace(';',':').split(',')
+
+>>> 'pc hello pc hello pc'.replace('pc','haha',1)替换的位置
+'haha hello pc hello pc'
+
+values() 函数以列表返回字典中的所有值
+>>> d ={'a': 50, 'aa': 35, 'w': 2}
+>>> d.values()
+[50, 35, 2]
+
+>>> d.items()
+[('a', 50), ('aa', 35), ('w', 2)]
+
+>>> d.keys()
+['a', 'aa', 'w']
+
+>>> d.popitem()
+('a', 50)
+>>> d.pop('aa')
+35
